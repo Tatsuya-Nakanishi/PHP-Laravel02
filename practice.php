@@ -1,45 +1,43 @@
-//PHP/Laravel 02 PHPの型と基本的な式を理解しよう　課題
+//PHP/Laravel 03 プログラムの実行を条件分岐構文と繰り返し構文で制御できるようになろう 課題
 
 <?php
 
-// 1.
-$a = 3;
-
-$b = 7;
-echo $a + $b;
-
-// 2.
-$array_month = ["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月",];
-echo $array_month[7];
-
-// 3.
-$hello = "Hello,";
+//1.
 $name = "tatsuya nakanishi";
-$world = "'s World!";
-echo $hello . $name . $world;
 
-// 4.
-$tech_boost = 'tech';
-$tech_boost .= 'boost';
-echo $tech_boost;
+if ($name == "tatsuya nakanishi") {
+    echo "私は　あなたの名前です";
+    echo "\n";
+}else {
+    echo "あなたの名前ではありません";
+    echo "\n";
+}
 
-// 5.
-$calendar_2018 = [
-  "January" => "1月",
-  "February" => "2月",
-  "March" => "3月",
-  "April" => "4月",
-  "May" => "5月",
-  "June" => "6月",
-  "July" => "7月",
-  "August" => "8月",
-  "September" => "9月",
-  "October" => "10月",
-  "November" => "11月",
-  "December" => "12月"
-];
+//2.
+$total = 0;
 
-// 12月を表示する
-echo $calendar_2018[December];
+for ($i = 1; $i <= 10000; $i++) {
+    $total += $i;
+}
+echo $total;
+echo "\n";
 
-?>
+//3.
+$fruits = array("apple","banana","peach","melon","orange");
+foreach($fruits as $value){
+    echo $value;
+    echo "\n";
+}
+
+//4.
+$start = 1;
+
+$end = 100;
+
+for($i = $start; $i <= $end; $i++){
+
+  if($i % 5 == 0){
+    echo $i;
+    echo "\n";
+  }
+}
